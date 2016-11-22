@@ -7,7 +7,7 @@ This is a simple macOS menu bar application that shows you the lyrics of current
 
 ## Installation
 
-You can grap the DMG file of the application from the [releases](https://github.com/mamal72/lyricsify-mac/releases). The installation is as easy as opening DMG file and dragging the application file to your Applications folder.
+You can grab the DMG file of the application from the [releases](https://github.com/mamal72/lyricsify-mac/releases). The installation is as easy as opening DMG file and dragging the application file to your Applications folder.
 
 
 ## Screenshots
