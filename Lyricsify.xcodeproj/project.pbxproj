@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		826EA23A8B7C419E36D69703 /* Pods_Lyricsify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3755371461950EF062934F89 /* Pods_Lyricsify.framework */; };
+		8CEF79541DE4112200FD4057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF79531DE4112200FD4057 /* AppDelegate.swift */; };
+		8CEF795B1DE4112200FD4057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEF79591DE4112200FD4057 /* Main.storyboard */; };
+		8CEF79661DE4112200FD4057 /* LyricsifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF79651DE4112200FD4057 /* LyricsifyTests.swift */; };
+		8CF537FA1DE4127A00704BCA /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF537F81DE4127A00704BCA /* LyricsViewController.swift */; };
+		8CF537FB1DE4127A00704BCA /* LyricsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF537F91DE4127A00704BCA /* LyricsViewController.xib */; };
+		8CF537FD1DE4168D00704BCA /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF537FC1DE4168D00704BCA /* EventMonitor.swift */; };
+		8CF538011DE419EF00704BCA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF538001DE419EF00704BCA /* String.swift */; };
+		8CF538041DE41A1C00704BCA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF538031DE41A1C00704BCA /* Track.swift */; };
+		8CF538061DE41A5C00704BCA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF538051DE41A5C00704BCA /* Helpers.swift */; };
+		8CF538081DE41A7300704BCA /* SpotifyHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF538071DE41A7300704BCA /* SpotifyHelpers.swift */; };
+		8CF5380E1DE4275100704BCA /* HelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380A1DE4275100704BCA /* HelpersTest.swift */; };
+		8CF5380F1DE4275100704BCA /* SpotifyHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380B1DE4275100704BCA /* SpotifyHelpersTest.swift */; };
+		8CF538101DE4275100704BCA /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380C1DE4275100704BCA /* StringTest.swift */; };
+		8CF538111DE4275100704BCA /* TrackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380D1DE4275100704BCA /* TrackTest.swift */; };
+		8CF538131DE42B3300704BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF538121DE42B3300704BCA /* Assets.xcassets */; };
+		8CF538151DE436A800704BCA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8CF538141DE436A800704BCA /* .gitignore */; };
+		966AEDC3D8DE33CA94BD83C5 /* Pods_LyricsifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB150CCE8988B8B77B072D22 /* Pods_LyricsifyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CEF79621DE4112200FD4057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CEF79481DE4112200FD4057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CEF794F1DE4112200FD4057;
+			remoteInfo = Lyricsify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3755371461950EF062934F89 /* Pods_Lyricsify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyricsify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468AFDE2C2F8188A3F82E6A9 /* Pods_LyricsifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricsifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC0C6FE3BF8700C2178F39E /* Pods-LyricsifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricsifyUITests/Pods-LyricsifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		85DDF05E8DECFB06EF4BB758 /* Pods-Lyricsify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyricsify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify.release.xcconfig"; sourceTree = "<group>"; };
+		877402F83ACF7F1B15E6C572 /* Pods-LyricsifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricsifyUITests/Pods-LyricsifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8CEF79501DE4112200FD4057 /* Lyricsify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyricsify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEF79531DE4112200FD4057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CEF795A1DE4112200FD4057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CEF795C1DE4112200FD4057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CEF79611DE4112200FD4057 /* LyricsifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricsifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEF79651DE4112200FD4057 /* LyricsifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsifyTests.swift; sourceTree = "<group>"; };
+		8CEF79671DE4112200FD4057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CEF79701DE4112200FD4057 /* LyricsifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsifyUITests.swift; sourceTree = "<group>"; };
+		8CEF79721DE4112200FD4057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF537F81DE4127A00704BCA /* LyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
+		8CF537F91DE4127A00704BCA /* LyricsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LyricsViewController.xib; sourceTree = "<group>"; };
+		8CF537FC1DE4168D00704BCA /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		8CF538001DE419EF00704BCA /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8CF538031DE41A1C00704BCA /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		8CF538051DE41A5C00704BCA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8CF538071DE41A7300704BCA /* SpotifyHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyHelpers.swift; sourceTree = "<group>"; };
+		8CF5380A1DE4275100704BCA /* HelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersTest.swift; sourceTree = "<group>"; };
+		8CF5380B1DE4275100704BCA /* SpotifyHelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyHelpersTest.swift; sourceTree = "<group>"; };
+		8CF5380C1DE4275100704BCA /* StringTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
+		8CF5380D1DE4275100704BCA /* TrackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTest.swift; sourceTree = "<group>"; };
+		8CF538121DE42B3300704BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CF538141DE436A800704BCA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8EF227F3B31F1F44D2D60C73 /* Pods-LyricsifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricsifyTests/Pods-LyricsifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		C699A77C6FCB023926605372 /* Pods-Lyricsify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyricsify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify.debug.xcconfig"; sourceTree = "<group>"; };
+		FB150CCE8988B8B77B072D22 /* Pods_LyricsifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricsifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB97B1AA65CAF59527C8DD9C /* Pods-LyricsifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricsifyTests/Pods-LyricsifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CEF794D1DE4112200FD4057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826EA23A8B7C419E36D69703 /* Pods_Lyricsify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEF795E1DE4112200FD4057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966AEDC3D8DE33CA94BD83C5 /* Pods_LyricsifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03EFEE975140AABEA0511985 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3755371461950EF062934F89 /* Pods_Lyricsify.framework */,
+				FB150CCE8988B8B77B072D22 /* Pods_LyricsifyTests.framework */,
+				468AFDE2C2F8188A3F82E6A9 /* Pods_LyricsifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D06641469240C14BB43E459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C699A77C6FCB023926605372 /* Pods-Lyricsify.debug.xcconfig */,
+				85DDF05E8DECFB06EF4BB758 /* Pods-Lyricsify.release.xcconfig */,
+				FB97B1AA65CAF59527C8DD9C /* Pods-LyricsifyTests.debug.xcconfig */,
+				8EF227F3B31F1F44D2D60C73 /* Pods-LyricsifyTests.release.xcconfig */,
+				7FC0C6FE3BF8700C2178F39E /* Pods-LyricsifyUITests.debug.xcconfig */,
+				877402F83ACF7F1B15E6C572 /* Pods-LyricsifyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CEF79471DE4112200FD4057 = {
+			isa = PBXGroup;
+			children = (
+				8CF538141DE436A800704BCA /* .gitignore */,
+				8CEF79521DE4112200FD4057 /* Lyricsify */,
+				8CEF79641DE4112200FD4057 /* LyricsifyTests */,
+				8CEF796F1DE4112200FD4057 /* LyricsifyUITests */,
+				8CEF79511DE4112200FD4057 /* Products */,
+				3D06641469240C14BB43E459 /* Pods */,
+				03EFEE975140AABEA0511985 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CEF79511DE4112200FD4057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF79501DE4112200FD4057 /* Lyricsify.app */,
+				8CEF79611DE4112200FD4057 /* LyricsifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CEF79521DE4112200FD4057 /* Lyricsify */ = {
+			isa = PBXGroup;
+			children = (
+				8CF538121DE42B3300704BCA /* Assets.xcassets */,
+				8CF538021DE41A0500704BCA /* Models */,
+				8CF537FF1DE419D500704BCA /* Extensions */,
+				8CF537FE1DE4199E00704BCA /* Inner */,
+				8CF537F71DE4126200704BCA /* Views */,
+				8CEF79531DE4112200FD4057 /* AppDelegate.swift */,
+				8CEF79591DE4112200FD4057 /* Main.storyboard */,
+				8CEF795C1DE4112200FD4057 /* Info.plist */,
+			);
+			path = Lyricsify;
+			sourceTree = "<group>";
+		};
+		8CEF79641DE4112200FD4057 /* LyricsifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF79651DE4112200FD4057 /* LyricsifyTests.swift */,
+				8CF5380A1DE4275100704BCA /* HelpersTest.swift */,
+				8CF5380B1DE4275100704BCA /* SpotifyHelpersTest.swift */,
+				8CF5380C1DE4275100704BCA /* StringTest.swift */,
+				8CF5380D1DE4275100704BCA /* TrackTest.swift */,
+				8CEF79671DE4112200FD4057 /* Info.plist */,
+			);
+			path = LyricsifyTests;
+			sourceTree = "<group>";
+		};
+		8CEF796F1DE4112200FD4057 /* LyricsifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF79701DE4112200FD4057 /* LyricsifyUITests.swift */,
+				8CEF79721DE4112200FD4057 /* Info.plist */,
+			);
+			path = LyricsifyUITests;
+			sourceTree = "<group>";
+		};
+		8CF537F71DE4126200704BCA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CF537F81DE4127A00704BCA /* LyricsViewController.swift */,
+				8CF537F91DE4127A00704BCA /* LyricsViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8CF537FE1DE4199E00704BCA /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+				8CF537FC1DE4168D00704BCA /* EventMonitor.swift */,
+				8CF538051DE41A5C00704BCA /* Helpers.swift */,
+				8CF538071DE41A7300704BCA /* SpotifyHelpers.swift */,
+			);
+			name = Inner;
+			sourceTree = "<group>";
+		};
+		8CF537FF1DE419D500704BCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CF538001DE419EF00704BCA /* String.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8CF538021DE41A0500704BCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CF538031DE41A1C00704BCA /* Track.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CEF794F1DE4112200FD4057 /* Lyricsify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CEF79751DE4112300FD4057 /* Build configuration list for PBXNativeTarget "Lyricsify" */;
+			buildPhases = (
+				CA840F5F7BCFBAE24DBA643E /* [CP] Check Pods Manifest.lock */,
+				8CEF794C1DE4112200FD4057 /* Sources */,
+				8CEF794D1DE4112200FD4057 /* Frameworks */,
+				8CEF794E1DE4112200FD4057 /* Resources */,
+				341E84A687CC26090571188D /* [CP] Embed Pods Frameworks */,
+				7DA48A73986005666F2FF4AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lyricsify;
+			productName = Lyricsify;
+			productReference = 8CEF79501DE4112200FD4057 /* Lyricsify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CEF79601DE4112200FD4057 /* LyricsifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CEF79781DE4112300FD4057 /* Build configuration list for PBXNativeTarget "LyricsifyTests" */;
+			buildPhases = (
+				AB97B988D6E065500FB2B449 /* [CP] Check Pods Manifest.lock */,
+				8CEF795D1DE4112200FD4057 /* Sources */,
+				8CEF795E1DE4112200FD4057 /* Frameworks */,
+				8CEF795F1DE4112200FD4057 /* Resources */,
+				199268594C2D6B6213A1E599 /* [CP] Embed Pods Frameworks */,
+				5D0133FA836CAC8820AEA9C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CEF79631DE4112200FD4057 /* PBXTargetDependency */,
+			);
+			name = LyricsifyTests;
+			productName = LyricsifyTests;
+			productReference = 8CEF79611DE4112200FD4057 /* LyricsifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CEF79481DE4112200FD4057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Mohamad Jahani";
+				TargetAttributes = {
+					8CEF794F1DE4112200FD4057 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = C38367RJEH;
+						ProvisioningStyle = Automatic;
+					};
+					8CEF79601DE4112200FD4057 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = C38367RJEH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8CEF794F1DE4112200FD4057;
+					};
+				};
+			};
+			buildConfigurationList = 8CEF794B1DE4112200FD4057 /* Build configuration list for PBXProject "Lyricsify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CEF79471DE4112200FD4057;
+			productRefGroup = 8CEF79511DE4112200FD4057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CEF794F1DE4112200FD4057 /* Lyricsify */,
+				8CEF79601DE4112200FD4057 /* LyricsifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CEF794E1DE4112200FD4057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF538151DE436A800704BCA /* .gitignore in Resources */,
+				8CF537FB1DE4127A00704BCA /* LyricsViewController.xib in Resources */,
+				8CF538131DE42B3300704BCA /* Assets.xcassets in Resources */,
+				8CEF795B1DE4112200FD4057 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEF795F1DE4112200FD4057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		199268594C2D6B6213A1E599 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricsifyTests/Pods-LyricsifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		341E84A687CC26090571188D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D0133FA836CAC8820AEA9C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricsifyTests/Pods-LyricsifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DA48A73986005666F2FF4AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB97B988D6E065500FB2B449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA840F5F7BCFBAE24DBA643E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CEF794C1DE4112200FD4057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF537FD1DE4168D00704BCA /* EventMonitor.swift in Sources */,
+				8CF538061DE41A5C00704BCA /* Helpers.swift in Sources */,
+				8CF538041DE41A1C00704BCA /* Track.swift in Sources */,
+				8CF537FA1DE4127A00704BCA /* LyricsViewController.swift in Sources */,
+				8CF538011DE419EF00704BCA /* String.swift in Sources */,
+				8CEF79541DE4112200FD4057 /* AppDelegate.swift in Sources */,
+				8CF538081DE41A7300704BCA /* SpotifyHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CEF795D1DE4112200FD4057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CEF79661DE4112200FD4057 /* LyricsifyTests.swift in Sources */,
+				8CF5380E1DE4275100704BCA /* HelpersTest.swift in Sources */,
+				8CF538111DE4275100704BCA /* TrackTest.swift in Sources */,
+				8CF538101DE4275100704BCA /* StringTest.swift in Sources */,
+				8CF5380F1DE4275100704BCA /* SpotifyHelpersTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CEF79631DE4112200FD4057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CEF794F1DE4112200FD4057 /* Lyricsify */;
+			targetProxy = 8CEF79621DE4112200FD4057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8CEF79591DE4112200FD4057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CEF795A1DE4112200FD4057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CEF79731DE4112200FD4057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CEF79741DE4112200FD4057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		8CEF79761DE4112300FD4057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C699A77C6FCB023926605372 /* Pods-Lyricsify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C38367RJEH;
+				INFOPLIST_FILE = Lyricsify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jahani.Lyricsify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8CEF79771DE4112300FD4057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85DDF05E8DECFB06EF4BB758 /* Pods-Lyricsify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C38367RJEH;
+				INFOPLIST_FILE = Lyricsify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jahani.Lyricsify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8CEF79791DE4112300FD4057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB97B1AA65CAF59527C8DD9C /* Pods-LyricsifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C38367RJEH;
+				INFOPLIST_FILE = LyricsifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jahani.LyricsifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyricsify.app/Contents/MacOS/Lyricsify";
+			};
+			name = Debug;
+		};
+		8CEF797A1DE4112300FD4057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EF227F3B31F1F44D2D60C73 /* Pods-LyricsifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C38367RJEH;
+				INFOPLIST_FILE = LyricsifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jahani.LyricsifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyricsify.app/Contents/MacOS/Lyricsify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CEF794B1DE4112200FD4057 /* Build configuration list for PBXProject "Lyricsify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEF79731DE4112200FD4057 /* Debug */,
+				8CEF79741DE4112200FD4057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CEF79751DE4112300FD4057 /* Build configuration list for PBXNativeTarget "Lyricsify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEF79761DE4112300FD4057 /* Debug */,
+				8CEF79771DE4112300FD4057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CEF79781DE4112300FD4057 /* Build configuration list for PBXNativeTarget "LyricsifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEF79791DE4112300FD4057 /* Debug */,
+				8CEF797A1DE4112300FD4057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CEF79481DE4112200FD4057 /* Project object */;
+}

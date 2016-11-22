@@ -1,0 +1,6 @@
+framework module Pods_LyricsifyTests {
+  umbrella header "Pods-LyricsifyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
