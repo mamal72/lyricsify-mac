@@ -49,8 +49,8 @@
                                 <constraints>
                                     <constraint firstItem="di0-8i-f9n" firstAttribute="leading" secondItem="5sP-Vm-Bx8" secondAttribute="leading" id="63q-yj-YDn"/>
                                     <constraint firstAttribute="trailing" secondItem="di0-8i-f9n" secondAttribute="trailing" id="Ce8-Zd-xoX"/>
-                                    <constraint firstItem="di0-8i-f9n" firstAttribute="height" secondItem="5sP-Vm-Bx8" secondAttribute="height" id="J9G-js-CC1"/>
-                                    <constraint firstItem="di0-8i-f9n" firstAttribute="top" secondItem="5sP-Vm-Bx8" secondAttribute="top" constant="30" id="qne-07-bcC"/>
+                                    <constraint firstItem="di0-8i-f9n" firstAttribute="top" secondItem="5sP-Vm-Bx8" secondAttribute="top" constant="20" id="qne-07-bcC"/>
+                                    <constraint firstAttribute="bottom" secondItem="di0-8i-f9n" secondAttribute="bottom" constant="70" id="wVh-0Y-1nv"/>
                                 </constraints>
                             </view>
                         </subviews>

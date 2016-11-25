@@ -14,24 +14,19 @@ class LyricsViewController: NSViewController {
     @IBOutlet weak var trackLyricsView: NSTextField!
     @IBOutlet weak var trackProgressView: NSProgressIndicator!
 
+    var nowPlayingTimer = Timer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        startTimer()
+    }
 
-        if #available(OSX 10.12, *) {
-            Timer.scheduledTimer(
-                withTimeInterval: 4,
-                repeats: true,
-                block: self.checkNowPlaying
-            )
-        } else {
-            Timer.scheduledTimer(
-                timeInterval: 4,
-                target: self,
-                selector: #selector(self.checkNowPlaying),
-                userInfo: nil,
-                repeats: true
-            )
-        }
+    override func viewWillAppear() {
+        startTimer()
+    }
+
+    override func viewWillDisappear() {
+        stopTimer()
     }
 
     @objc private func checkNowPlaying(_: Timer) {
@@ -81,5 +76,33 @@ class LyricsViewController: NSViewController {
         trackProgressView.isHidden = false
         self.trackLyricsView.isHidden = true
         self.trackTitleView.isHidden = true
+    }
+
+    func startTimer() {
+        if nowPlayingTimer.isValid {
+            return
+        }
+
+        if #available(OSX 10.12, *) {
+            nowPlayingTimer = Timer.scheduledTimer(
+                withTimeInterval: 4,
+                repeats: true,
+                block: self.checkNowPlaying
+            )
+        } else {
+            nowPlayingTimer = Timer.scheduledTimer(
+                timeInterval: 4,
+                target: self,
+                selector: #selector(self.checkNowPlaying),
+                userInfo: nil,
+                repeats: true
+            )
+        }
+    }
+
+    func stopTimer() {
+        if nowPlayingTimer.isValid {
+            nowPlayingTimer.invalidate()
+        }
     }
 }
