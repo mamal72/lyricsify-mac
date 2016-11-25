@@ -13,7 +13,7 @@ class SpotifyHelpers {
         )
         return response
     }
-    
+
     public static func getSomethingOfCurrentTrack(thing: String) -> String {
         return tellSpotify(
             command: "\(thing) of current track"
@@ -21,14 +21,14 @@ class SpotifyHelpers {
                 of: "\n", with: ""
         )
     }
-    
+
     public static func getNowPlaying() -> Track? {
         if self.isSpotifyRunning() {
             return Track()
         }
         return nil
     }
-    
+
     public static func isSpotifyRunning() -> Bool {
         return Helpers.excuteAppleScript(script: "application \"Spotify\" is running") == "true"
     }

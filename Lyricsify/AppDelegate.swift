@@ -10,8 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
     let popover = NSPopover()
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     var eventMonitor: EventMonitor?
@@ -19,7 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.image = #imageLiteral(resourceName: "StatusIcon")
         statusItem.toolTip = "Lyricsify"
-        popover.contentViewController = LyricsViewController(nibName: "LyricsViewController", bundle: nil)
+        popover.contentViewController = LyricsViewController(
+            nibName: "LyricsViewController",
+            bundle: nil
+        )
         popover.behavior = .transient
 
         if let button = statusItem.button {
@@ -59,4 +60,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 }
-

@@ -16,9 +16,8 @@ extension String {
             range: nil
         )
     }
-    
+
     func breakToNewLine() -> String {
         return self.replacingOccurrences(of: "<br>", with: "\n")
     }
 }
-
