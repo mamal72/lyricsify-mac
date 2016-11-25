@@ -23,8 +23,6 @@
 		8CF538101DE4275100704BCA /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380C1DE4275100704BCA /* StringTest.swift */; };
 		8CF538111DE4275100704BCA /* TrackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF5380D1DE4275100704BCA /* TrackTest.swift */; };
 		8CF538131DE42B3300704BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF538121DE42B3300704BCA /* Assets.xcassets */; };
-		8CF538151DE436A800704BCA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8CF538141DE436A800704BCA /* .gitignore */; };
-		8CF538171DE4381C00704BCA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8CF538161DE4381C00704BCA /* README.md */; };
 		966AEDC3D8DE33CA94BD83C5 /* Pods_LyricsifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB150CCE8988B8B77B072D22 /* Pods_LyricsifyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +63,6 @@
 		8CF5380C1DE4275100704BCA /* StringTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		8CF5380D1DE4275100704BCA /* TrackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTest.swift; sourceTree = "<group>"; };
 		8CF538121DE42B3300704BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8CF538141DE436A800704BCA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		8CF538161DE4381C00704BCA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EF227F3B31F1F44D2D60C73 /* Pods-LyricsifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricsifyTests/Pods-LyricsifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C699A77C6FCB023926605372 /* Pods-Lyricsify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyricsify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify.debug.xcconfig"; sourceTree = "<group>"; };
 		FB150CCE8988B8B77B072D22 /* Pods_LyricsifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricsifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +115,6 @@
 		8CEF79471DE4112200FD4057 = {
 			isa = PBXGroup;
 			children = (
-				8CF538161DE4381C00704BCA /* README.md */,
-				8CF538141DE436A800704BCA /* .gitignore */,
 				8CEF79521DE4112200FD4057 /* Lyricsify */,
 				8CEF79641DE4112200FD4057 /* LyricsifyTests */,
 				8CEF796F1DE4112200FD4057 /* LyricsifyUITests */,
@@ -224,6 +218,7 @@
 				8CEF794E1DE4112200FD4057 /* Resources */,
 				341E84A687CC26090571188D /* [CP] Embed Pods Frameworks */,
 				7DA48A73986005666F2FF4AA /* [CP] Copy Pods Resources */,
+				8C6431DB1DE8017B003FDF2C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -302,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CF538151DE436A800704BCA /* .gitignore in Resources */,
 				8CF537FB1DE4127A00704BCA /* LyricsViewController.xib in Resources */,
 				8CF538131DE42B3300704BCA /* Assets.xcassets in Resources */,
 				8CEF795B1DE4112200FD4057 /* Main.storyboard in Resources */,
@@ -379,6 +373,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyricsify/Pods-Lyricsify-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8C6431DB1DE8017B003FDF2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		AB97B988D6E065500FB2B449 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,7 +429,6 @@
 				8CF537FA1DE4127A00704BCA /* LyricsViewController.swift in Sources */,
 				8CF538011DE419EF00704BCA /* String.swift in Sources */,
 				8CEF79541DE4112200FD4057 /* AppDelegate.swift in Sources */,
-				8CF538171DE4381C00704BCA /* README.md in Sources */,
 				8CF538081DE41A7300704BCA /* SpotifyHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
