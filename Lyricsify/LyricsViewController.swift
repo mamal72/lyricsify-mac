@@ -14,6 +14,18 @@ class LyricsViewController: NSViewController {
     @IBOutlet weak var trackLyricsView: NSTextField!
     @IBOutlet weak var trackProgressView: NSProgressIndicator!
 
+    @IBAction func playerToggle(_ sender: NSButton) {
+        SpotifyHelpers.togglePlayingState()
+    }
+
+    @IBAction func playerNext(_ sender: NSButton) {
+        SpotifyHelpers.nextTrack()
+    }
+
+    @IBAction func playerPrevious(_ sender: NSButton) {
+        SpotifyHelpers.previousTrack()
+    }
+
     var nowPlayingTimer = Timer()
 
     override func viewDidLoad() {
@@ -67,20 +79,26 @@ class LyricsViewController: NSViewController {
     }
 
     func showLyricsView() {
+        trackProgressView.stopAnimation(nil)
         self.trackLyricsView.isHidden = false
         self.trackTitleView.isHidden = false
         trackProgressView.isHidden = true
     }
 
     func hideLyricsView() {
+        trackProgressView.startAnimation(nil)
         trackProgressView.isHidden = false
         self.trackLyricsView.isHidden = true
         self.trackTitleView.isHidden = true
     }
 
-    func startTimer() {
+    func startTimer(runOnceImmediately: Bool = true) {
         if nowPlayingTimer.isValid {
             return
+        }
+
+        if runOnceImmediately {
+            self.checkNowPlaying(self.nowPlayingTimer)
         }
 
         if #available(OSX 10.12, *) {

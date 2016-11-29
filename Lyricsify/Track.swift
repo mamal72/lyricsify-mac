@@ -14,6 +14,7 @@ class Track {
     public var artist: String
     public var album: String
     public var name: String
+    public var duration: Int
     public var lyrics: String?
     public var onLyricsChanged: ((String) -> Void)?
 
@@ -42,16 +43,18 @@ class Track {
         return "\(lyricsUriPath)\(trackTitle)"
     }
 
-    init(artist: String, album: String, name: String) {
+    init(artist: String, album: String, name: String, duration: Int = 0) {
         self.artist = artist
         self.album = album
         self.name = name
+        self.duration = duration
     }
 
     init() {
         self.artist = SpotifyHelpers.getSomethingOfCurrentTrack(thing: "artist")
         self.album = SpotifyHelpers.getSomethingOfCurrentTrack(thing: "album")
         self.name = SpotifyHelpers.getSomethingOfCurrentTrack(thing: "name")
+        self.duration = Int(SpotifyHelpers.getSomethingOfCurrentTrack(thing: "duration"))! / 1000
     }
 
     private func fetchLyrics(
