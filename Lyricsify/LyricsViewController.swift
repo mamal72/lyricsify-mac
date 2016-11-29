@@ -13,6 +13,15 @@ class LyricsViewController: NSViewController {
     @IBOutlet weak var trackTitleView: NSTextField!
     @IBOutlet weak var trackLyricsView: NSTextField!
     @IBOutlet weak var trackProgressView: NSProgressIndicator!
+    @IBOutlet weak var playerProgressView: NSSlider!
+
+    var nowPlayingTimer = Timer()
+
+    @IBAction func playerProgressChange(_ sender: NSSlider) {
+        if let nowPlayingTrack = SpotifyHelpers.getNowPlaying() {
+            nowPlayingTrack.position = Int(Double(playerProgressView.stringValue)!)
+        }
+    }
 
     @IBAction func playerToggle(_ sender: NSButton) {
         SpotifyHelpers.togglePlayingState()
@@ -25,8 +34,6 @@ class LyricsViewController: NSViewController {
     @IBAction func playerPrevious(_ sender: NSButton) {
         SpotifyHelpers.previousTrack()
     }
-
-    var nowPlayingTimer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +50,7 @@ class LyricsViewController: NSViewController {
 
     @objc private func checkNowPlaying(_: Timer) {
         if let nowPlayingTrack = SpotifyHelpers.getNowPlaying() {
+            self.playerProgressView.stringValue = String(nowPlayingTrack.position)
             if
                 nowPlayingTrack.title != "" &&
                 nowPlayingTrack.title != self.trackTitleView.stringValue {
@@ -70,6 +78,7 @@ class LyricsViewController: NSViewController {
 
     func loadTrack(track: Track) {
         self.setTrackTitle(title: track.title)
+        self.playerProgressView.maxValue = Double(track.duration)
         track.onLyricsChanged = { lyrics in
             self.setTrackLyrics(lyrics: track.lyrics!)
             self.showLyricsView()

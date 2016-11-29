@@ -27,6 +27,15 @@ class Track {
         }
     }
 
+    public var position: Int {
+        get {
+            return Int(Double(SpotifyHelpers.tellSpotify(command: "player position"))!)
+        }
+        set {
+            _ = SpotifyHelpers.tellSpotify(command: "set player position to \(newValue)")
+        }
+    }
+
     private let searchApiUri = "http://lyrics.wikia.com/index.php"
     private let lyricsUriPath = "http://lyrics.wikia.com/wiki/"
 

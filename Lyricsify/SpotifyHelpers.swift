@@ -12,7 +12,7 @@ enum PlayingState {
 }
 
 class SpotifyHelpers {
-    private static func tellSpotify(command: String) -> String {
+    static func tellSpotify(command: String) -> String {
         let response = Helpers.excuteAppleScript(
             script: "tell application \"Spotify\" to \(command) as string"
         )
@@ -67,7 +67,7 @@ class SpotifyHelpers {
             return
         }
 
-        _ = tellSpotify(command: "set player position to 0")
+        // _ = tellSpotify(command: "set player position to 0")
         _ = tellSpotify(command: "previous track")
     }
 

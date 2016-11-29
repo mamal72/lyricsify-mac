@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LyricsViewController" customModule="Lyricsify" customModuleProvider="target">
             <connections>
+                <outlet property="playerProgressView" destination="RVL-5I-HLO" id="CTD-7K-buc"/>
                 <outlet property="trackLyricsView" destination="di0-8i-f9n" id="r8R-wR-fV0"/>
                 <outlet property="trackProgressView" destination="vg8-lT-KVB" id="D7E-aj-27T"/>
                 <outlet property="trackTitleView" destination="8qT-tz-fII" id="T9A-gf-wR8"/>
@@ -32,13 +33,13 @@
                     </textFieldCell>
                 </textField>
                 <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VID-Fw-7co">
-                    <rect key="frame" x="0.0" y="50" width="250" height="190"/>
+                    <rect key="frame" x="0.0" y="57" width="250" height="183"/>
                     <clipView key="contentView" drawsBackground="NO" id="LVp-PW-58q">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="190"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="183"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sP-Vm-Bx8">
-                                <rect key="frame" x="0.0" y="-345" width="425" height="520"/>
+                                <rect key="frame" x="0.0" y="-352" width="425" height="520"/>
                                 <subviews>
                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="di0-8i-f9n">
                                         <rect key="frame" x="24" y="328" width="200" height="202"/>
@@ -68,14 +69,21 @@
                         <rect key="frame" x="-100" y="-100" width="440" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="3hH-cB-MSe">
-                        <rect key="frame" x="234" y="0.0" width="16" height="190"/>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.97329376854599403" horizontal="NO" id="3hH-cB-MSe">
+                        <rect key="frame" x="234" y="0.0" width="16" height="183"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
                 <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="vg8-lT-KVB">
                     <rect key="frame" x="108" y="134" width="32" height="32"/>
                 </progressIndicator>
+                <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-5I-HLO">
+                    <rect key="frame" x="18" y="36" width="214" height="17"/>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="below" sliderType="linear" id="rol-Nj-k9y"/>
+                    <connections>
+                        <action selector="playerProgressChange:" target="-2" id="r94-kb-DHj"/>
+                    </connections>
+                </slider>
                 <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqQ-BW-y0g">
                     <rect key="frame" x="55" y="9" width="40" height="40"/>
                     <buttonCell key="cell" type="square" title="&lt;" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uWq-iY-BAB">
@@ -111,6 +119,8 @@
                 <constraint firstItem="VID-Fw-7co" firstAttribute="top" secondItem="8qT-tz-fII" secondAttribute="bottom" constant="15" id="8Pt-Pd-fTD"/>
                 <constraint firstAttribute="trailing" secondItem="VID-Fw-7co" secondAttribute="trailing" id="9CB-uY-Ac5"/>
                 <constraint firstItem="R3H-RP-QTe" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="C3k-8E-dkV"/>
+                <constraint firstAttribute="trailing" secondItem="RVL-5I-HLO" secondAttribute="trailing" constant="15" id="Dvp-41-iSZ"/>
+                <constraint firstItem="RVL-5I-HLO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="Gad-YY-iLb"/>
                 <constraint firstAttribute="bottom" secondItem="sqQ-BW-y0g" secondAttribute="bottom" constant="10" id="GgT-is-aXv"/>
                 <constraint firstAttribute="trailing" secondItem="8qT-tz-fII" secondAttribute="trailing" constant="10" id="Jw5-Bi-05H"/>
                 <constraint firstAttribute="bottom" secondItem="R3H-RP-QTe" secondAttribute="bottom" constant="10" id="LMm-Re-I8l"/>
@@ -120,6 +130,7 @@
                 <constraint firstItem="vg8-lT-KVB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="XNF-cK-uhc"/>
                 <constraint firstAttribute="bottom" secondItem="Z4P-sE-tkF" secondAttribute="bottom" constant="10" id="XdY-g7-qrh"/>
                 <constraint firstAttribute="bottom" secondItem="VID-Fw-7co" secondAttribute="bottom" constant="50" id="k0e-rA-cSb"/>
+                <constraint firstAttribute="bottom" secondItem="RVL-5I-HLO" secondAttribute="bottom" constant="30" id="mvk-ao-Pg5"/>
                 <constraint firstItem="8qT-tz-fII" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="scA-Jb-Ll1"/>
                 <constraint firstItem="VID-Fw-7co" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="vwt-07-Yhd"/>
                 <constraint firstAttribute="trailing" secondItem="Z4P-sE-tkF" secondAttribute="trailing" constant="40" id="zgp-lo-D2g"/>
