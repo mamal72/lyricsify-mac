@@ -17,6 +17,12 @@ You can grab the DMG file of the application from the [releases](https://github.
 <img alt="fa" title="fa" src="https://cdn.rawgit.com/mamal72/lyricsify-mac/master/screenshots/fa.png" width="480px">
 
 
+## Disclaimer
+
+This application works by scrapping **public** data from websites. This looks like simulating user actions in a web browser. Unfortunately, using a scrapper to fetch data from some websites may violate their terms.
+
+Please note that it's all your responsibility to use this app.
+
 
 ## Ideas || Issues
 Just fill an issue and describe it. I'll check it ASAP!
